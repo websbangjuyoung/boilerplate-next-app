@@ -1,38 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# A boilerplate project for nextjs
 
-## Getting Started
+## How to Use
 
-First, run the development server:
+### 프로젝트 시작
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone <this repository>
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 개발
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+// 로컬 서버 http://localhost:3000
+npm run dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### 빌드
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npm run build
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+// 로컬 서버에서 실행 (http://localhost:3000)
+npm run start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Packages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Base
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- nextjs [공식문서](https://nextjs.org/)
+  - React 기반 웹 프레임워크
 
-## Deploy on Vercel
+### UI
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- tailwindcss [공식문서](https://tailwindcss.com/)
+  - CSS 프레임웨크로 미리 정의된 유틸리티 클래스를 활용
+- storybook [공식문서](https://storybook.js.org/)
+  - UI 개발/테스트/문서 등 전반적으로 활용
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Better for Development Experience
+
+- 코드 포매터 및 린터
+  - prettier [공식문서](https://prettier.io/)
+    - 일관된 코드 스타일 유지
+  - eslint [공식문서](https://eslint.org/)
+    - javascript 코드 검사
+  - typescript-eslint [공식문서](https://typescript-eslint.io/)
+    - typescript 코드에서 eslint 실행
+- git 훅
+  - husky [공식문서](https://typicode.github.io/husky)
+    - 커밋(or 푸시)할 때 커밋 메세지 검사, 테스트 등을 실행
+  - lint-staged [공식문서](https://github.com/okonet/lint-staged)
+    - 스테이지된 파일을 검사 (husky 와 같이 사용)
+
+### ETC
+
+- @next/bundle-analyzer [공식문서](https://www.npmjs.com/package/@next/bundle-analyzer)
+  - 번들된 파일 분석 for 웹 성능 최적화
+- cross-env [공식문서](https://github.com/kentcdodds/cross-env)
+  - 환경에 상관없이 동일한 환경 변수 설정
+- rimraf [공식문서](https://github.com/isaacs/rimraf)
+  - The UNIX command rm -rf for node
